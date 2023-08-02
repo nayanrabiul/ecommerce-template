@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@types/node':
     specifier: 20.4.5
@@ -22,6 +26,9 @@ dependencies:
   eslint-config-next:
     specifier: 13.4.12
     version: 13.4.12(eslint@8.46.0)(typescript@5.1.6)
+  flag-icons:
+    specifier: ^6.9.2
+    version: 6.9.2
   install:
     specifier: ^0.13.0
     version: 0.13.0
@@ -1288,6 +1295,10 @@ packages:
     dependencies:
       locate-path: 6.0.0
       path-exists: 4.0.0
+    dev: false
+
+  /flag-icons@6.9.2:
+    resolution: {integrity: sha512-zN/v2PJYdM0N/9R82KM99aRUtfLhj0WbFspOj1Ha1RZbwD7K2/4mMm2Qz8ujFli0d79gx2RgZ71astcXsHMdSA==}
     dev: false
 
   /flat-cache@3.0.4:
