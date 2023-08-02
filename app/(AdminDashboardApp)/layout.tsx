@@ -20,7 +20,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     );
 }
 
+import { usePathname } from 'next/navigation';
+
 const Sidemenu = ({ menu }) => {
+    const pathname = usePathname();
+    // const isActive = pathname.startsWith(link.href);
     const renderMenuItem = (item) => {
         if (item.items) {
             return (
@@ -52,6 +56,44 @@ const Sidemenu = ({ menu }) => {
 };
 
 let menu = [
+    {
+        label: 'resume.pdf',
+        icon: 'pi pi-fw pi-home',
+        to: '/',
+    },
+
+    {
+        label: 'My Files',
+        icon: 'pi pi-fw pi-id-card',
+        items: [
+            {
+                label: 'Project-final.psd',
+                icon: 'pi pi-fw pi-id-card',
+                to: '/uikit/formlayout',
+            },
+            {
+                label: 'Images',
+                icon: 'pi pi-fw pi-id-card',
+                items: [
+                    {
+                        label: 'Screenshot1.png',
+                        icon: 'pi pi-fw pi-id-card',
+                        to: '/uikit/formlayout',
+                    },
+                    {
+                        label: 'Screenshot3.png',
+                        icon: 'pi pi-fw pi-id-card',
+                        to: '/uikit/formlayout',
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        label: 'resume.pdf',
+        icon: 'pi pi-fw pi-home',
+        to: '/',
+    },
     {
         label: 'resume.pdf',
         icon: 'pi pi-fw pi-home',
